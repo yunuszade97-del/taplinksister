@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<!--
+  ═══════════════════════════════════════════════════════════════════
+  ЧЕК-ЛИСТ: ЧТО ЗАМЕНИТЬ ПЕРЕД ПУБЛИКАЦИЕЙ
+  ═══════════════════════════════════════════════════════════════════
+  Данные врача уже подставлены: Шафаг Садыгова, WhatsApp +7 964 386-15-86,
+  Telegram @dr_dietolog_spb, фото photo.jpg.
+
+  ОСТАЛОСЬ ЗАМЕНИТЬ:
+  1.  Категория врача в hero — если её нет, удалите второй блок в .stats
+  2.  Бланк «Приём» — часы и языки (дни: Пн–Пт, пациенты: 18+ — заполнено)
+  3.  Ссылка на Instagram (сейчас instagram.com/username)
+  4.  Ссылка на карту клиники (сейчас yandex.ru/maps)
+  5.  Ссылка на отзывы (сейчас prodoctorov.ru)
+  6.  Теги «С чем обращаются» — добавить свои при необходимости
+  7.  Юрлицо / лицензия в footer — если требуется клиникой
+  8.  Фото: загрузить photo.jpg в taplink и подставить его URL в <img id="doc-photo">
+  9.  Проверить с телефона: все три кнопки открывают WhatsApp с текстом
+  ═══════════════════════════════════════════════════════════════════
+-->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Шафаг Садыгова — врач-гастроэнтеролог, диетолог</title>
+<meta name="description" content="Врач-гастроэнтеролог, диетолог. Санкт-Петербург. Ведение хронических заболеваний ЖКТ и диетотерапия для взрослых 18+. Приём очно и онлайн, Пн–Пт, запись в WhatsApp.">
+<meta name="theme-color" content="#f5ead8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Podkova:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#f5ead8; --surface:#ebddc5; --text:#201e1d;
+  --n100:#f9f4ed; --n300:#dcd3c4; --n700:#645c50; --n800:#474238;
+  --a100:#fff2eb; --a300:#ffc6a5; --a500:#c67139; --a600:#b2622d; --a700:#8c491a; --a800:#643312;
+  --g100:#f0fae1; --g200:#e1eecc; --g700:#56633f; --g800:#3d472b;
+  --divider:rgba(32,30,29,.16);
+  --shadow-sm:0 1px 2px rgba(46,43,37,.14); --shadow-md:0 3px 10px rgba(46,43,37,.16);
+  --r-lg:32px;
+  --head:"Podkova",Georgia,serif; --body:"Manrope",system-ui,-apple-system,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--text);font-family:var(--body);
+  font-size:16px;line-height:1.6;overflow-x:hidden;
+  padding:0 20px calc(96px + env(safe-area-inset-bottom));
+}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3{font-family:var(--head);font-weight:700;line-height:1.1;letter-spacing:-.015em;margin:0}
+p{margin:0}
+a{color:var(--a700)}
+:focus{outline:none}
+:focus-visible{outline:2px solid var(--a600);outline-offset:3px;border-radius:6px}
+::selection{background:rgba(198,113,57,.28)}
+.wrap{width:100%;max-width:1140px;margin:0 auto}
+
+/* — buttons — */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:var(--head);font-weight:700;font-size:17px;line-height:1.2;
+  text-decoration:none;border-radius:999px;border:1px solid transparent;cursor:pointer;
+  min-height:52px;padding:14px 30px;
+  background:var(--a500);color:var(--bg);box-shadow:var(--shadow-sm);
+  transition:background .2s ease,transform .2s var(--ease);
+}
+.btn:hover{background:var(--a600);color:var(--bg);transform:translateY(-1px)}
+.btn:active{background:var(--a700);transform:translateY(0)}
+.btn-block{display:flex;width:100%}
+
+/* — hero — */
+.hero{display:flex;flex-direction:column;gap:28px;padding:26px 0 34px}
+.photo{position:relative;width:100%;max-width:400px}
+.photo::before{
+  content:"";position:absolute;left:-6%;top:6%;width:88%;padding-top:88%;
+  border-radius:50%;background:var(--g200);
+}
+.frame{
+  position:relative;width:100%;aspect-ratio:4/5;overflow:hidden;
+  border-radius:999px 999px 34px 34px;box-shadow:var(--shadow-md);background:var(--surface);
+}
+.photo img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 4%;
+  transform:scale(1.3);transform-origin:50% 12%;
+  filter:sepia(.3) saturate(1.35) brightness(1.03) contrast(.95);
+}
+.photo::after{
+  content:"";position:absolute;inset:0;border-radius:999px 999px 34px 34px;
+  background:var(--bg);mix-blend-mode:multiply;opacity:.35;pointer-events:none;
+}
+.kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--g700);margin-bottom:12px}
+h1{font-size:clamp(36px,9vw,62px);margin-bottom:16px}
+.lede{font-size:clamp(17px,4.4vw,21px);line-height:1.55;max-width:34ch;color:var(--n800);margin-bottom:26px}
+.stats{display:flex;flex-wrap:wrap;gap:18px 30px;margin-bottom:26px}
+.stat{min-width:98px;max-width:200px}
+.stat b{display:block;font-family:var(--head);font-weight:700;font-size:clamp(26px,6vw,34px);line-height:1;color:var(--a700)}
+.stat span{display:block;font-size:13px;margin-top:6px;color:var(--n700)}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.note{font-size:14px;color:var(--n700)}
+
+/* — sections — */
+.sec{display:flex;flex-direction:column;gap:22px;padding:34px 0;border-top:1px solid var(--divider)}
+.sec-head{max-width:38ch}
+.sec-head h2{font-size:clamp(25px,6vw,34px);margin-bottom:8px}
+.sec-head p{font-size:15px;color:var(--n700)}
+
+.lines{display:flex;flex-direction:column;gap:10px;max-width:720px}
+.line{font-family:var(--head);font-weight:600;font-size:clamp(17px,4.2vw,20px);line-height:1.3;padding-left:18px;border-left:3px solid var(--a300)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start;max-width:720px}
+.tag{display:inline-flex;align-items:center;font-size:14px;line-height:1.3;padding:7px 14px;border-radius:999px;background:var(--n100);color:var(--n800)}
+.tag.g{background:var(--g100);color:var(--g800)}
+.tag.a{background:var(--a100);color:var(--a800)}
+
+.steps{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.step{display:flex;flex-direction:column;gap:12px;padding:24px;border-radius:var(--r-lg);background:var(--n100)}
+.step i{
+  display:grid;place-items:center;width:44px;height:44px;border-radius:50%;
+  background:var(--g200);color:var(--g800);font-family:var(--head);font-weight:700;font-size:19px;font-style:normal;
+}
+.step h3{font-size:19px}
+.step p{font-size:15px;color:var(--n800)}
+
+.blank{padding:24px;border-radius:var(--r-lg);background:var(--surface)}
+.row{display:flex;flex-wrap:wrap;gap:4px 18px;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--divider)}
+.row dt{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--n700)}
+.row dd{margin:0;font-size:16px;flex:1 1 200px;min-width:0;text-align:left}
+.blank .btn{margin-top:22px;font-size:16px}
+
+.links{display:grid;gap:12px;grid-template-columns:1fr}
+.link{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  min-height:62px;padding:16px 22px;border-radius:999px;text-decoration:none;
+  color:var(--text);background:var(--n100);border:1px solid var(--divider);
+  transition:background .2s ease,border-color .2s ease;
+}
+.link:hover{background:var(--a100);border-color:var(--a300);color:var(--text)}
+.link span{font-size:16px}
+.link em{font-style:normal;font-size:18px;color:var(--a700)}
+
+footer{display:flex;flex-direction:column;gap:16px;padding:32px 0 0;border-top:1px solid var(--divider)}
+.sign{font-family:var(--head);font-weight:700;font-size:19px;line-height:1.25}
+.sign span{display:block;font-family:var(--body);font-weight:400;font-size:14px;color:var(--n700)}
+.disclaimer{font-size:13.5px;line-height:1.65;color:var(--n700)}
+
+/* — sticky CTA — */
+.sticky{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(245,234,216,.92);backdrop-filter:blur(12px);
+  border-top:1px solid var(--divider);
+  transform:translateY(130%);transition:transform .45s var(--ease);
+}
+.sticky.is-on{transform:translateY(0)}
+.sticky .btn{max-width:520px;margin:0 auto;font-size:16px;min-height:50px;padding:12px 24px}
+
+/* — scroll reveal (only once JS confirms motion is allowed) — */
+.js-reveal [data-reveal]{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s var(--ease)}
+.js-reveal [data-reveal].is-in{opacity:1;transform:none}
+
+/* — tablet — */
+@media (min-width:720px){
+  body{padding-left:40px;padding-right:40px}
+  .hero{flex-direction:row;align-items:center;gap:44px;padding:48px 0}
+  .hero-photo{flex:1 1 260px;max-width:360px}
+  .hero-body{flex:1.9 1 380px;min-width:0}
+  .sec{flex-direction:row;gap:40px;padding:52px 0}
+  .sec-head{flex:1 1 210px;max-width:320px}
+  .sec-body{flex:2.8 1 380px;min-width:0}
+  .steps{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .links{grid-template-columns:1fr 1fr}
+  .blank{padding:32px}
+  .row dd{text-align:right}
+  footer{flex-direction:row;gap:40px}
+  .sign{flex:1 1 210px;max-width:320px}
+  .disclaimer{flex:2.8 1 380px;min-width:0}
+}
+/* — desktop — */
+@media (min-width:1080px){
+  body{padding-left:56px;padding-right:56px;padding-bottom:80px}
+  .hero{gap:64px;padding:70px 0 58px}
+  .sec{gap:48px;padding:60px 0}
+  .step{padding:26px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js-reveal [data-reveal]{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-photo">
+      <div class="photo">
+        <div class="frame">
+          <!-- ЗАМЕНИТЬ при смене фото: photo.jpg, портрет, ≤200 КБ -->
+          <img id="doc-photo" width="879" height="1280" src="photo.jpg"
+               alt="Шафаг Садыгова, врач-гастроэнтеролог и диетолог">
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-body">
+      <p class="kicker">Врач-гастроэнтеролог&nbsp;· диетолог · Санкт-Петербург</p>
+      <h1>Шафаг Садыгова</h1>
+      <p class="lede">Веду пациентов с хроническими заболеваниями ЖКТ и подбираю диетотерапию — так, чтобы питание работало на лечение, а не против него.</p>
+
+      <div class="stats">
+        <div class="stat"><b>7 лет</b><span>клинический стаж</span></div>
+        <div class="stat"><b>3 года</b><span>ординатура и интернатура</span></div>
+        <div class="stat"><b>18+</b><span>только взрослые пациенты</span></div>
+      </div>
+      <p class="note" style="max-width:40ch;margin-bottom:26px">СЗГМУ им. И. И. Мечникова, Санкт-Петербург · ординатура 2 года, интернатура 1 год</p>
+
+      <div class="cta-row">
+        <a class="btn" id="hero-cta" target="_blank" rel="noopener"
+           href="https://wa.me/79643861586?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%B8%D1%91%D0%BC%20%D0%BA%20%D0%B3%D0%B0%D1%81%D1%82%D1%80%D0%BE%D1%8D%D0%BD%D1%82%D0%B5%D1%80%D0%BE%D0%BB%D0%BE%D0%B3%D1%83">Записаться в WhatsApp</a>
+        <span class="note">Отвечаю лично, обычно в течение дня</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="sec" data-reveal aria-labelledby="s1">
+    <div class="sec-head">
+      <h2 id="s1">С чем обращаются</h2>
+      <p>Напишите о своёй ситуации — разберёмся вместе.</p>
+    </div>
+    <!-- ЗАМЕНИТЬ при необходимости: направления -->
+    <div class="sec-body">
+      <div class="lines">
+        <p class="line">Ведение пациентов с хроническими заболеваниями желудочно-кишечного тракта</p>
+        <p class="line">Диетотерапия заболеваний ЖКТ</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" data-reveal aria-labelledby="s2">
+    <div class="sec-head">
+      <h2 id="s2">Как проходит приём</h2>
+      <p>Без спешки и без лишних обследований.</p>
+    </div>
+    <div class="sec-body steps">
+      <div class="step">
+        <i aria-hidden="true">1</i>
+        <h3>Запись</h3>
+        <p>Пишете в WhatsApp удобное время. Подтверждаю приём и заранее присылаю, какие анализы и выписки взять с собой.</p>
+      </div>
+      <div class="step">
+        <i aria-hidden="true">2</i>
+        <h3>Консультация</h3>
+        <p>40–60 минут: подробный разбор жалоб и истории, осмотр, при необходимости — УЗИ и направление на исследования.</p>
+      </div>
+      <div class="step">
+        <i aria-hidden="true">3</i>
+        <h3>Рекомендации на руки</h3>
+        <p>Уходите с письменным планом: схема лечения, питание, сроки контроля. Уточняющие вопросы после приёма — в переписке.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" data-reveal aria-labelledby="s3">
+    <div class="sec-head">
+      <h2 id="s3">Приём</h2>
+      <p>Очно в клинике и онлайн — для повторных консультаций и разбора анализов.</p>
+    </div>
+    <div class="sec-body">
+      <!-- ЗАМЕНИТЬ: дни и часы, формат, языки -->
+      <dl class="blank">
+        <div class="row"><dt>Дни и часы</dt><dd>Пн–Пт, 10:00–17:00</dd></div>
+        <div class="row"><dt>Пациенты</dt><dd>Только взрослые, 18+</dd></div>
+        <div class="row"><dt>Формат</dt><dd>Очно · онлайн-видеоконсультация</dd></div>
+        <div class="row" style="border-bottom:0"><dt>Языки</dt><dd>Русский, английский</dd></div>
+        <a class="btn btn-block" target="_blank" rel="noopener"
+           href="https://wa.me/79643861586?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%20%D0%B1%D0%BB%D0%B8%D0%B6%D0%B0%D0%B9%D1%88%D0%B5%D0%B5%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D1%80%D0%B8%D1%91%D0%BC%D0%B0">Спросить о свободном времени</a>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec" data-reveal aria-labelledby="s4">
+    <div class="sec-head">
+      <h2 id="s4">Где я ещё есть</h2>
+      <p>Разборы, ответы на частые вопросы и отзывы пациентов.</p>
+    </div>
+    <!-- ЗАМЕНИТЬ: ссылки на соцсети, карту и отзывы -->
+    <nav class="sec-body links" aria-label="Внешние ссылки">
+      <a class="link" href="https://t.me/dr_dietolog_spb" target="_blank" rel="noopener"><span>Telegram</span><em aria-hidden="true">→</em></a>
+      <!-- ЗАМЕНИТЬ: ссылка на Instagram -->
+      <a class="link" href="https://instagram.com/username" target="_blank" rel="noopener"><span>Instagram</span><em aria-hidden="true">→</em></a>
+      <a class="link" href="https://wa.me/79643861586" target="_blank" rel="noopener"><span>WhatsApp</span><em aria-hidden="true">→</em></a>
+      <a class="link" href="https://prodoctorov.ru/" target="_blank" rel="noopener"><span>Отзывы пациентов</span><em aria-hidden="true">→</em></a>
+    </nav>
+  </section>
+
+  <footer>
+    <p class="sign">Шафаг Садыгова<span>врач-гастроэнтеролог, диетолог</span></p>
+    <p class="disclaimer">Информация на этой странице носит справочный характер, не является публичной офертой и не заменяет очную консультацию врача. Диагноз и назначения возможны только на приёме. Имеются противопоказания — необходима консультация специалиста.</p>
+  </footer>
+
+</div>
+
+<div class="sticky" id="sticky">
+  <a class="btn btn-block" target="_blank" rel="noopener"
+     href="https://wa.me/79643861586?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%B8%D1%91%D0%BC%20%D0%BA%20%D0%B3%D0%B0%D1%81%D1%82%D1%80%D0%BE%D1%8D%D0%BD%D1%82%D0%B5%D1%80%D0%BE%D0%BB%D0%BE%D0%B3%D1%83">Записаться в WhatsApp</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasIO = 'IntersectionObserver' in window;
+
+  if (hasIO && !reduce) {
+    document.documentElement.classList.add('js-reveal');
+    var fired = false;
+    var showAll = function(){
+      document.documentElement.classList.remove('js-reveal');
+    };
+    var io = new IntersectionObserver(function(entries){
+      fired = true;
+      entries.forEach(function(e){
+        if (!e.isIntersecting) return;
+        e.target.classList.add('is-in');
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.06, rootMargin: '0px 0px -6% 0px' });
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
+    setTimeout(function(){ if (!fired) showAll(); }, 1200);
+  }
+
+  var cta = document.getElementById('hero-cta');
+  var sticky = document.getElementById('sticky');
+  if (cta && sticky && hasIO) {
+    new IntersectionObserver(function(entries){
+      sticky.classList.toggle('is-on', !entries[0].isIntersecting);
+    }, { threshold: 0 }).observe(cta);
+  }
+})();
+</script>
+</body>
+</html>
