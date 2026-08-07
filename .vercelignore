@@ -1,0 +1,15 @@
+# Личные файлы — НЕ публиковать
+uploads/
+scraps/
+screenshots/
+
+# Служебное / инструменты сборки
+_ds/
+.thumbnail
+*.dc.html
+image-slot.js
+support.js
+README.md
+*.zip
+.DS_Store
+.git

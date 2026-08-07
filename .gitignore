@@ -1,9 +1,37 @@
-# === СИСТЕМА ===
+# === СЕКРЕТЫ И ОКРУЖЕНИЕ ===
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.cert
+*.p12
+secrets/
+credentials/
+
+# === ЛИЧНЫЕ / РАБОЧИЕ ФАЙЛЫ ===
+uploads/
+scraps/
+*.napkin
+screenshots/
+
+# === IDE И СИСТЕМА ===
 .DS_Store
 Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# === ЛОГИ И ВРЕМЕННОЕ ===
+logs/
+*.log
+tmp/
+temp/
+.cache/
 
 # === АРХИВЫ / ВЫГРУЗКИ ===
 *.zip
 
-# === ЛИЧНЫЕ / РАБОЧИЕ ФАЙЛЫ ===
-uploads/
+# === ДЕПЛОЙ ===
+.vercel
