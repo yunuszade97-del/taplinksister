@@ -8,14 +8,11 @@
 
   ОСТАЛОСЬ ЗАМЕНИТЬ:
   1.  Категория врача в hero — если её нет, удалите второй блок в .stats
-  2.  Бланк «Приём» — часы и языки (дни: Пн–Пт, пациенты: 18+ — заполнено)
-  3.  Ссылка на Instagram (сейчас instagram.com/username)
-  4.  Ссылка на карту клиники (сейчас yandex.ru/maps)
-  5.  Ссылка на отзывы (сейчас prodoctorov.ru)
-  6.  Теги «С чем обращаются» — добавить свои при необходимости
-  7.  Юрлицо / лицензия в footer — если требуется клиникой
-  8.  Фото: загрузить photo.jpg в taplink и подставить его URL в <img id="doc-photo">
-  9.  Проверить с телефона: все три кнопки открывают WhatsApp с текстом
+  2.  Бланк «Приём» — языки (клиника, формат, пациенты: 18+ — заполнено)
+  3.  Теги «С чем обращаются» — добавить свои при необходимости
+  4.  Юрлицо / лицензия в footer — если требуется клиникой
+  5.  Фото: загрузить photo.jpg в taplink и подставить его URL в <img id="doc-photo">
+  6.  Проверить с телефона: все три кнопки открывают WhatsApp с текстом
   ═══════════════════════════════════════════════════════════════════
 -->
 <html lang="ru">
@@ -23,7 +20,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Шафаг Садыгова — врач-гастроэнтеролог, диетолог</title>
-<meta name="description" content="Врач-гастроэнтеролог, диетолог. Санкт-Петербург. Ведение хронических заболеваний ЖКТ и диетотерапия для взрослых 18+. Приём очно и онлайн, Пн–Пт, запись в WhatsApp.">
+<meta name="description" content="Врач-гастроэнтеролог, диетолог. Санкт-Петербург. Ведение хронических заболеваний ЖКТ и диетотерапия для взрослых 18+. Приём очно в клинике «Медика» на Дегтярной, консультации очно и онлайн, запись в WhatsApp.">
 <meta name="theme-color" content="#f5ead8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -208,11 +205,11 @@ footer{display:flex;flex-direction:column;gap:16px;padding:32px 0 0;border-top:1
       <p class="lede">Веду пациентов с хроническими заболеваниями ЖКТ и подбираю диетотерапию — так, чтобы питание работало на лечение, а не против него.</p>
 
       <div class="stats">
-        <div class="stat"><b>7 лет</b><span>клинический стаж</span></div>
-        <div class="stat"><b>3 года</b><span>ординатура и интернатура</span></div>
+        <div class="stat"><b>11 лет</b><span>клинический стаж</span></div>
+        <div class="stat"><b>2 года</b><span>ординатура</span></div>
         <div class="stat"><b>18+</b><span>только взрослые пациенты</span></div>
       </div>
-      <p class="note" style="max-width:40ch;margin-bottom:26px">СЗГМУ им. И. И. Мечникова, Санкт-Петербург · ординатура 2 года, интернатура 1 год</p>
+      <p class="note" style="max-width:40ch;margin-bottom:26px">СЗГМУ им. И. И. Мечникова, Санкт-Петербург · ординатура 2 года</p>
 
       <div class="cta-row">
         <a class="btn" id="hero-cta" target="_blank" rel="noopener"
@@ -250,12 +247,12 @@ footer{display:flex;flex-direction:column;gap:16px;padding:32px 0 0;border-top:1
       <div class="step">
         <i aria-hidden="true">2</i>
         <h3>Консультация</h3>
-        <p>40–60 минут: подробный разбор жалоб и истории, осмотр, при необходимости — УЗИ и направление на исследования.</p>
+        <p>40–60 минут, очно или онлайн. При необходимости — направление на исследования.</p>
       </div>
       <div class="step">
         <i aria-hidden="true">3</i>
         <h3>Рекомендации на руки</h3>
-        <p>Уходите с письменным планом: схема лечения, питание, сроки контроля. Уточняющие вопросы после приёма — в переписке.</p>
+        <p>Уходите с письменным планом: схема лечения, питание, сроки контроля.</p>
       </div>
     </div>
   </section>
@@ -263,14 +260,14 @@ footer{display:flex;flex-direction:column;gap:16px;padding:32px 0 0;border-top:1
   <section class="sec" data-reveal aria-labelledby="s3">
     <div class="sec-head">
       <h2 id="s3">Приём</h2>
-      <p>Очно в клинике и онлайн — для повторных консультаций и разбора анализов.</p>
+      <p>Приём очно в клинике, консультации — очно и онлайн.</p>
     </div>
     <div class="sec-body">
-      <!-- ЗАМЕНИТЬ: дни и часы, формат, языки -->
+      <!-- ЗАМЕНИТЬ: языки -->
       <dl class="blank">
-        <div class="row"><dt>Дни и часы</dt><dd>Пн–Пт, 10:00–17:00</dd></div>
+        <div class="row"><dt>Клиника</dt><dd><a href="https://yandex.ru/maps/?text=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%94%D0%B5%D0%B3%D1%82%D1%8F%D1%80%D0%BD%D0%B0%D1%8F%2C%2023%20%D0%BA%D0%BB%D0%B8%D0%BD%D0%B8%D0%BA%D0%B0%20%D0%9C%D0%B5%D0%B4%D0%B8%D0%BA%D0%B0" target="_blank" rel="noopener">Клиника «Медика» на Дегтярной, ул. Дегтярная, д. 23</a></dd></div>
         <div class="row"><dt>Пациенты</dt><dd>Только взрослые, 18+</dd></div>
-        <div class="row"><dt>Формат</dt><dd>Очно · онлайн-видеоконсультация</dd></div>
+        <div class="row"><dt>Формат</dt><dd>Приём очно · консультация очно и онлайн</dd></div>
         <div class="row" style="border-bottom:0"><dt>Языки</dt><dd>Русский, английский</dd></div>
         <a class="btn btn-block" target="_blank" rel="noopener"
            href="https://wa.me/79643861586?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%20%D0%B1%D0%BB%D0%B8%D0%B6%D0%B0%D0%B9%D1%88%D0%B5%D0%B5%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D1%80%D0%B8%D1%91%D0%BC%D0%B0">Спросить о свободном времени</a>
@@ -286,10 +283,9 @@ footer{display:flex;flex-direction:column;gap:16px;padding:32px 0 0;border-top:1
     <!-- ЗАМЕНИТЬ: ссылки на соцсети, карту и отзывы -->
     <nav class="sec-body links" aria-label="Внешние ссылки">
       <a class="link" href="https://t.me/dr_dietolog_spb" target="_blank" rel="noopener"><span>Telegram</span><em aria-hidden="true">→</em></a>
-      <!-- ЗАМЕНИТЬ: ссылка на Instagram -->
-      <a class="link" href="https://instagram.com/username" target="_blank" rel="noopener"><span>Instagram</span><em aria-hidden="true">→</em></a>
+      <a class="link" href="https://www.instagram.com/dr.dietolog.spb/" target="_blank" rel="noopener"><span>Instagram</span><em aria-hidden="true">→</em></a>
       <a class="link" href="https://wa.me/79643861586" target="_blank" rel="noopener"><span>WhatsApp</span><em aria-hidden="true">→</em></a>
-      <a class="link" href="https://prodoctorov.ru/" target="_blank" rel="noopener"><span>Отзывы пациентов</span><em aria-hidden="true">→</em></a>
+      <a class="link" href="https://prodoctorov.ru/spb/vrach/747056-sadygova/" target="_blank" rel="noopener"><span>Отзывы пациентов</span><em aria-hidden="true">→</em></a>
     </nav>
   </section>
 
